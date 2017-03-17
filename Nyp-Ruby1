@@ -20,12 +20,12 @@ class Vehicle
 		@price == other.price
 	end
 
-	def discount(miktar)
-		@price-miktar
+	def discount(amount)
+		@price-amount
 	end
 
-	def raise(miktar)
-		@price+miktar
+	def raise(amount)
+		@price+amount
 	end
 	 
 end
