@@ -35,11 +35,11 @@ def main
 
     p, q = Vehicle.new("Taksi", "Samsun", 20000), Vehicle.new("Kamyon", "Kırşehir",80000)   
 
-    puts "İki aracın priceları " + (p.equal?(q) ? 'eşittir.' : "eşit değildir.")
-    puts "İki aracın pricelarından Samsun'daki Taksi priceı diğerine göre daha " + (q.expensive?(p) ? 'pahalı değildir.' : 'pahalıdır.')
-    puts "İki aracın pricelarından Samsun'daki Taksi priceı diğerine göre daha " + (p.cheap?(q) ?  'ucuz.' : 'ucuz değildir.')
-    puts "Samsundaki Taksinin indirimli priceı  #{p.discount(2000)}"
-    puts "Samsundaki Taksinin zamlı priceı  #{p.raise(2000)}"
+    puts "İki aracın fiyatları " + (p.equal?(q) ? 'eşittir.' : "eşit değildir.")
+    puts "İki aracın fiyatlarından Samsun'daki Taksi fiyatı diğerine göre daha " + (q.expensive?(p) ? 'pahalı değildir.' : 'pahalıdır.')
+    puts "İki aracın fiyatlarından Samsun'daki Taksi fiyatıı diğerine göre daha " + (p.cheap?(q) ?  'ucuz.' : 'ucuz değildir.')
+    puts "Samsundaki Taksinin indirimli fiyatı  #{p.discount(2000)}"
+    puts "Samsundaki Taksinin zamlı fiyatı  #{p.raise(2000)}"
 
 end
 
