@@ -1,0 +1,46 @@
+class Vehicle
+
+	attr_reader :type,:county,:price
+
+	def initialize (type,county,price)
+		@type = type
+		@county = county
+		@price = price
+	end
+
+	def expensive?(other)
+		@price > other.price
+	end
+
+	def cheap?(other)
+		@price < other.price
+	end
+
+	def equal?(other)
+		@price == other.price
+	end
+
+	def discount(miktar)
+		@price-miktar
+	end
+
+	def raise(miktar)
+		@price+miktar
+	end
+	 
+end
+
+
+def main
+
+    p, q = Vehicle.new("Taksi", "Samsun", 20000), Vehicle.new("Kamyon", "Kırşehir",80000)   
+
+    puts "İki aracın priceları " + (p.equal?(q) ? 'eşittir.' : "eşit değildir.")
+    puts "İki aracın pricelarından Samsun'daki Taksi priceı diğerine göre daha " + (q.expensive?(p) ? 'pahalı değildir.' : 'pahalıdır.')
+    puts "İki aracın pricelarından Samsun'daki Taksi priceı diğerine göre daha " + (p.cheap?(q) ?  'ucuz.' : 'ucuz değildir.')
+    puts "Samsundaki Taksinin indirimli priceı  #{p.discount(2000)}"
+    puts "Samsundaki Taksinin zamlı priceı  #{p.raise(2000)}"
+
+end
+
+main if __FILE__ == $PROGRAM_NAME
