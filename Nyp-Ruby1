@@ -22,24 +22,51 @@ class Vehicle
 
 	def discount(amount)
 		@price-amount
+
 	end
 
 	def raise(amount)
-		@price+amount
+		@price+amount	
 	end
-	 
+
 end
 
+def equal(value1, value2)
+
+	print "İki aracın fiyatları eşit"
+	puts (value1.equal?(value2) ? ' değildir' : 'tir')
+end
+
+def cheap_price(value1,value2)
+	print "İki aracın fiyatlarından #{value1.county}'daki #{value1.type}'nin fiyatı daha pahalı"
+	puts (value1.cheap?(value2) ? ' değildir' : 'dır' )
+end
+
+def expensive_price(value1,value2)
+	print "İki aracın fiyatlarından #{value1.county}'daki #{value1.type}'nin fiyatı daha pahalı"
+	puts (value1.cheap?(value2) ? ' değildir' : 'dır' )
+end
+
+def discount_price(value1,value2)
+	puts "#{value1.county}'daki #{value1.type}'nin indirimli fiyatı #{value1.discount(value2)}"
+end
+
+def raise_price(value1, value2)
+	puts "#{value1.county}'daki #{value1.type}'nin zamlı fiyat #{value1.raise(value2)}"
+end
 
 def main
 
-    p, q = Vehicle.new("Taksi", "Samsun", 20000), Vehicle.new("Kamyon", "Kırşehir",80000)   
+    p = Vehicle.new("Taksi", "Samsun", 20000) 
+    q = Vehicle.new("Kamyon", "Kırşehir",80000)   
+    
 
-    puts "İki aracın fiyatları " + (p.equal?(q) ? 'eşittir.' : "eşit değildir.")
-    puts "İki aracın fiyatlarından Samsun'daki Taksi fiyatı diğerine göre daha " + (q.expensive?(p) ? 'pahalı değildir.' : 'pahalıdır.')
-    puts "İki aracın fiyatlarından Samsun'daki Taksi fiyatıı diğerine göre daha " + (p.cheap?(q) ?  'ucuz.' : 'ucuz değildir.')
-    puts "Samsundaki Taksinin indirimli fiyatı  #{p.discount(2000)}"
-    puts "Samsundaki Taksinin zamlı fiyatı  #{p.raise(2000)}"
+    equal(p,q)   
+    cheap_price(p,q)
+    expensive_price(p,q)
+    discount_price(p,5000) 
+    raise_price(p,5000) 
+    
 
 end
 
