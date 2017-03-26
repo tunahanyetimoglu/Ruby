@@ -75,7 +75,6 @@ def main
     discount_price(p,2000) 
     raise_price(p,2000) 
     
-
 end
 
 main if __FILE__ == $PROGRAM_NAME
