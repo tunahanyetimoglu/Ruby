@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 class Vehicle
 
 	attr_reader :type,:county,:price
